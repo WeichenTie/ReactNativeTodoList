@@ -13,7 +13,8 @@ export function ImagePicker({ setFile, file }) {
                    roll permission to upload images.`
       );
     } else {
-      const result = await ImagePicker.launchImageLibraryAsync();
+      const result = await ImagePicker_.launchImageLibraryAsync();
+      console.log(result);
       if (!result.canceled) {
         setFile(result.assets[0].uri);
       }
