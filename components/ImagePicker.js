@@ -14,7 +14,6 @@ export function ImagePicker({ setFile, file }) {
       );
     } else {
       const result = await ImagePicker_.launchImageLibraryAsync();
-      console.log(result);
       if (!result.canceled) {
         setFile(result.assets[0].uri);
       }
